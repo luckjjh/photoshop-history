@@ -1,0 +1,189 @@
+@import url("./reset.css");
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #333333;
+}
+
+.head {
+  display: flex;
+  height: 500px;
+  background-image: url("./images/cover.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: aqua;
+  justify-content: center;
+  align-items: flex-end;
+}
+.head .title {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-direction: column;
+  color: #fff;
+}
+
+.title .sm-txt {
+  font-size: 1rem;
+}
+.title .lg-txt {
+  position: relative;
+  z-index: 10;
+  font-size: 2rem;
+  letter-spacing: 1rem;
+}
+
+.title .lg-txt::after {
+  content: "";
+  position: absolute;
+  margin-left: -1rem;
+  top: 0.9rem;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 0.4rem;
+  opacity: 0.7;
+  background-color: dodgerblue;
+  z-index: -10;
+}
+
+.main {
+  position: relative;
+  padding: 8rem 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main::after {
+  content: "";
+  position: absolute;
+  top: 13rem;
+  left: 50%;
+  width: 0.2rem;
+  height: 100%;
+  background-color: dodgerblue;
+}
+
+.history-box {
+  position: relative;
+  width: 47%;
+  padding: 1.5rem 1.5rem 0;
+  background-color: #222222;
+  border-radius: 1rem;
+  box-sizing: border-box;
+}
+.history-box:nth-child(odd) {
+  margin-top: -2rem;
+  margin-right: auto;
+  text-align: right;
+}
+.history-box:nth-child(even) {
+  margin-top: -2rem;
+  margin-left: auto;
+  text-align: left;
+}
+
+.history-box .ver-img {
+  width: 100px;
+}
+.history-box:nth-child(odd) .ver-img {
+  position: absolute;
+  top: -50px;
+  left: 25px;
+}
+
+.history-box:nth-child(even) .ver-img {
+  position: absolute;
+  top: -50px;
+  right: 25px;
+}
+
+.history-box .year-txt {
+  font-size: 5rem;
+  font-weight: 900;
+  color: dodgerblue;
+}
+.history-box .ver-txt {
+  margin: 1rem;
+  color: #fff;
+}
+.history-box .ver-info {
+  background-color: #000;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  color: #888888;
+  text-align: left;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.history-box .ver-info li {
+  margin-bottom: 0.8rem;
+}
+
+.history-box .ver-info li::before {
+  content: "";
+  display: inline-block;
+  margin-right: 1rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 1rem;
+  background-color: #888888;
+}
+
+.history-box:nth-child(odd)::after {
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: 100%;
+  width: 0px;
+  height: 0px;
+  border-left: 1rem solid #222222;
+  border-top: 1rem solid transparent;
+  border-bottom: 1rem solid transparent;
+}
+
+.history-box:nth-child(even)::after {
+  content: "";
+  position: absolute;
+  top: 45%;
+  right: 100%;
+  width: 0px;
+  height: 0px;
+  border-right: 1rem solid #222222;
+  border-top: 1rem solid transparent;
+  border-bottom: 1rem solid transparent;
+}
+
+.history-box:nth-child(odd)::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 48%;
+  left: 406px;
+  width: 1rem;
+  height: 1rem;
+  background-color: #333333;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  border: dodgerblue solid 0.2rem;
+}
+.history-box:nth-child(even)::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 48%;
+  right: 406px;
+  width: 1rem;
+  height: 1rem;
+  background-color: #333333;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  border: dodgerblue solid 0.2rem;
+}
